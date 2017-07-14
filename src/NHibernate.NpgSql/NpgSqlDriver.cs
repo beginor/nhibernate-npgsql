@@ -1,0 +1,42 @@
+﻿using System.Data;
+using NHibernate;
+using NHibernate.Driver;
+using NHibernate.SqlTypes;
+using Npgsql;
+
+namespace Beginor.NHibernate.NpgSql {
+
+    public class NpgSqlDriver : NpgsqlDriver {
+
+        protected override void InitializeParameter(
+            IDbDataParameter dbParam,
+            string name,
+            SqlType sqlType
+        ) {
+            if (sqlType is NpgSqlType && dbParam is NpgsqlParameter) {
+                this.InitializeParameter(
+                    dbParam as NpgsqlParameter,
+                    name,
+                    sqlType as NpgSqlType
+                );
+            }
+            else {
+                base.InitializeParameter(dbParam, name, sqlType);
+            }
+        }
+
+        protected virtual void InitializeParameter(
+            NpgsqlParameter dbParam,
+            string name,
+            NpgSqlType sqlType
+        ) {
+            if (sqlType == null) {
+                throw new QueryException($"No type assigned to parameter '{name}'");
+            }
+            dbParam.ParameterName = FormatNameForParameter(name);
+            dbParam.DbType = sqlType.DbType;
+            dbParam.NpgsqlDbType = sqlType.NpgDbType;
+        }
+    }
+
+}

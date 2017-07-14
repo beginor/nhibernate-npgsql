@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<package >
+  <metadata>
+    <id>Beginor.NHibernate.NpgSql</id>
+    <version>1.0.0</version>
+    <title>Beginor.NHibernate.NpgSql</title>
+    <authors>beginor</authors>
+    <owners>beginor</owners>
+    <projectUrl>https://github.com/beginor/nhibernate-npgsql</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>NHibernate support of PostgreSQL json, jsonb and string[] field.</description>
+    <summary>NHibernate support of PostgreSQL json, jsonb and string[] field.</summary>
+    <releaseNotes>
+        1.0.0: initial release, support for PostgreSQL json, jsonb and string[] field.
+    </releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>NHibernate, Postgres</tags>
+    <dependencies>
+        <dependency id="NHibernate" version="4.1.1.4000" />
+        <dependency id="Npgsql" version="3.2.4.1" />
+        <dependency id="Newtonsoft.Json" version="10.0.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin/Release/Beginor.NHibernate.NpgSql.dll"
+        target="lib/net45" />
+  </files>
+</package>

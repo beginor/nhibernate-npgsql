@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Beginor.NHibernate.NpgSql.Test.Data"
+    assembly="Beginor.NHibernate.NpgSql.Test"
+    >
+
+    <typedef name="npgJson" class="Beginor.NHibernate.NpgSql.JsonType, Beginor.NHibernate.NpgSql" />
+    <typedef name="npgJsonb" class="Beginor.NHibernate.NpgSql.JsonbType, Beginor.NHibernate.NpgSql" />
+    <typedef name="npgStringArray" class="Beginor.NHibernate.NpgSql.StringArrayType, Beginor.NHibernate.NpgSql" />
+
+    <class name="TestEntity" table="test_table" schema="public">
+        <id name="Id" column="id" type="int">
+            <generator class="sequence">
+                <param name="sequence">public.test_table_id_seq</param>
+            </generator>
+        </id>
+        <property name="Name" column="name" type="string" length="32" />
+        <property name="Tags" column="tags" type="npgStringArray" length="32"></property>
+        <property name="JsonField" column="json_field" type="npgJson" />
+        <property name="JsonbField" column="jsonb_field" type="npgJson" />
+        <property name="UpdateTime" column="update_time" type="datetime" />
+    </class>
+
+</hibernate-mapping>

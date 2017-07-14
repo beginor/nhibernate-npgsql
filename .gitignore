@@ -1,0 +1,4 @@
+*.user
+*.userprefs
+bin
+obj

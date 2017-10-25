@@ -46,15 +46,12 @@
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\..\packages\NHibernate.5.0.0\lib\net461\NHibernate.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="Iesi.Collections">
       <HintPath>..\..\..\packages\Iesi.Collections.4.0.2\lib\net461\Iesi.Collections.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="Npgsql">
       <HintPath>..\..\..\packages\Npgsql.3.2.5\lib\net451\Npgsql.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>

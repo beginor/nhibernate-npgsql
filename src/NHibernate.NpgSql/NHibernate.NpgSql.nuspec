@@ -16,13 +16,13 @@
     <copyright>Copyright 2017</copyright>
     <tags>NHibernate, Postgres</tags>
     <dependencies>
-        <dependency id="NHibernate" version="4.1.1.4000" />
-        <dependency id="Npgsql" version="3.2.4.1" />
+        <dependency id="NHibernate" version="5.0.0" />
+        <dependency id="Npgsql" version="3.2.5" />
         <dependency id="Newtonsoft.Json" version="10.0.3" />
     </dependencies>
   </metadata>
   <files>
     <file src="bin/Release/Beginor.NHibernate.NpgSql.dll"
-        target="lib/net45" />
+        target="lib/net61" />
   </files>
 </package>

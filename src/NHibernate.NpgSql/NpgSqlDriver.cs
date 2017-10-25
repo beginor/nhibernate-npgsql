@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Data.Common;
 using NHibernate;
 using NHibernate.Driver;
 using NHibernate.SqlTypes;
@@ -9,7 +10,7 @@ namespace Beginor.NHibernate.NpgSql {
     public class NpgSqlDriver : NpgsqlDriver {
 
         protected override void InitializeParameter(
-            IDbDataParameter dbParam,
+            DbParameter dbParam,
             string name,
             SqlType sqlType
         ) {

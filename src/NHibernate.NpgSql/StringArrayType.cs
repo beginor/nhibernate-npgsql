@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
+using System.Data.Common;
 using Newtonsoft.Json;
+using NHibernate.Engine;
 using NHibernate.SqlTypes;
 using NHibernate.UserTypes;
 using Npgsql;
@@ -53,14 +55,14 @@ namespace Beginor.NHibernate.NpgSql {
             return x.GetHashCode();
         }
 
-        public object NullSafeGet(IDataReader rs, string[] names, object owner) {
+        public object NullSafeGet(DbDataReader rs, string[] names, ISessionImplementor session, object owner) {
             if (names.Length != 1) {
                 throw new InvalidOperationException("Only expecting one column...");
             }
             return rs[names[0]] as string[];
         }
 
-        public void NullSafeSet(IDbCommand cmd, object value, int index) {
+        public void NullSafeSet(DbCommand cmd, object value, int index, ISessionImplementor session) {
             var parameter = ((NpgsqlParameter)cmd.Parameters[index]);
             if (value == null) {
                 parameter.Value = DBNull.Value;

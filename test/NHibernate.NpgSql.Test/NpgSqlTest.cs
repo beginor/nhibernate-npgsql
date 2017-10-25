@@ -47,7 +47,12 @@ namespace Beginor.NHibernate.NpgSql.Test {
                 var entities = query.ToList();
                 Assert.NotNull(entities);
 
-                session.Delete(entity);
+                foreach (var e in entities) {
+                    session.Delete(e);
+                }
+
+                session.Flush();
+
             }
         }
 

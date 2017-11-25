@@ -29,9 +29,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>..\..\..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -44,14 +41,20 @@
     <Reference Include="Remotion.Linq.EagerFetching">
       <HintPath>..\..\..\packages\Remotion.Linq.EagerFetching.2.1.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>..\..\..\packages\NHibernate.5.0.0\lib\net461\NHibernate.dll</HintPath>
-    </Reference>
     <Reference Include="Iesi.Collections">
       <HintPath>..\..\..\packages\Iesi.Collections.4.0.2\lib\net461\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
       <HintPath>..\..\..\packages\Npgsql.3.2.5\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\packages\NHibernate.5.0.1\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\..\..\packages\System.Threading.Tasks.Extensions.4.4.0\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +64,13 @@
     <Compile Include="JsonType.cs" />
     <Compile Include="JsonbType.cs" />
     <Compile Include="StringArrayType.cs" />
+    <Compile Include="ArrayType.cs" />
+    <Compile Include="Int32ArrayType.cs" />
+    <Compile Include="Int16ArrayType.cs" />
+    <Compile Include="DoubleArrayType.cs" />
+    <Compile Include="Int64ArrayType.cs" />
+    <Compile Include="FloatArrayType.cs" />
+    <Compile Include="BooleanArrayType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

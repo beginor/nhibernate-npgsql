@@ -7,9 +7,15 @@
     assembly="Beginor.NHibernate.NpgSql.Test"
     >
 
-    <typedef name="npgJson" class="Beginor.NHibernate.NpgSql.JsonType, Beginor.NHibernate.NpgSql" />
-    <typedef name="npgJsonb" class="Beginor.NHibernate.NpgSql.JsonbType, Beginor.NHibernate.NpgSql" />
-    <typedef name="npgStringArray" class="Beginor.NHibernate.NpgSql.StringArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="json" class="Beginor.NHibernate.NpgSql.JsonType, Beginor.NHibernate.NpgSql" />
+    <typedef name="jsonb" class="Beginor.NHibernate.NpgSql.JsonbType, Beginor.NHibernate.NpgSql" />
+    <typedef name="stringArray" class="Beginor.NHibernate.NpgSql.StringArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="int16Array" class="Beginor.NHibernate.NpgSql.Int16ArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="int32Array" class="Beginor.NHibernate.NpgSql.Int32ArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="int64Array" class="Beginor.NHibernate.NpgSql.Int64ArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="floatArray" class="Beginor.NHibernate.NpgSql.FloatArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="doubleArray" class="Beginor.NHibernate.NpgSql.DoubleArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="booleanArray" class="Beginor.NHibernate.NpgSql.BooleanArrayType, Beginor.NHibernate.NpgSql" />
 
     <class name="TestEntity" table="test_table" schema="public">
         <id name="Id" column="id" type="int">
@@ -18,10 +24,16 @@
             </generator>
         </id>
         <property name="Name" column="name" type="string" length="32" />
-        <property name="Tags" column="tags" type="npgStringArray" length="32"></property>
-        <property name="JsonField" column="json_field" type="npgJson" />
-        <property name="JsonbField" column="jsonb_field" type="npgJson" />
+        <property name="Tags" column="tags" type="stringArray" length="32" />
+        <property name="JsonField" column="json_field" type="json" />
+        <property name="JsonbField" column="jsonb_field" type="jsonb" />
         <property name="UpdateTime" column="update_time" type="datetime" />
+        <property name="Int16Arr" column="int16_arr" type="int16Array" />
+        <property name="Int32Arr" column="int32_arr" type="int32Array" />
+        <property name="Int64Arr" column="int64_arr" type="int64Array" />
+        <property name="FloatArr" column="real_arr" type="floatArray" />
+        <property name="DoubleArr" column="double_arr" type="doubleArray" />
+        <property name="BooleanArr" column="bool_arr" type="booleanArray" />
     </class>
 
 </hibernate-mapping>

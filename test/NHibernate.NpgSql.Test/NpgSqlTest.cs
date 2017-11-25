@@ -32,7 +32,13 @@ namespace Beginor.NHibernate.NpgSql.Test {
                     Tags = new string[] { "hello", "world" },
                     JsonField = "{ \"val\": 1 }",
                     JsonbField = "{ \"val\": 1 }",
-                    UpdateTime = DateTime.Now
+                    UpdateTime = DateTime.Now,
+                    Int16Arr = new short[] { 1, 2, 3 },
+                    Int32Arr = new int[] { 1, 2, 3 },
+                    Int64Arr = new long[] { 1L, 2L, 3L },
+                    FloatArr = new float[] { 1.1F, 2.2F, 3.3F },
+                    DoubleArr = new double[] { 1.1, 2.2, 3.3 },
+                    BooleanArr = new bool[] { true, false }
                 };
 
                 session.Save(entity);

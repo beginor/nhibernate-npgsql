@@ -1,3 +1,10 @@
+This project is no longer maintained. Take a look at the [NHibernate Extensions for .NET Core project](https://github.com/beginor/nhibernate-extensions) for the following extentions:
+
+- [NHibernate.Extensions.NpgSql](https://github.com/beginor/nhibernate-extensions#nhibernateextensionsnpgsql)
+- [NHibernate.Extensions.Sqlite](https://github.com/beginor/nhibernate-extensions#nhibernateextensionssqlite)
+- [NHibernate.NetCore](https://github.com/beginor/nhibernate-extensions#nhibernatenetcore)
+
+----
 # Beginor.NHibernate.NpgSql
 
 NHibernate Extension for supporting of PostgreSQL's `json`, `jsonb` and
